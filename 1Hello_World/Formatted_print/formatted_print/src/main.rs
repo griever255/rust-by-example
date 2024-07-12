@@ -34,7 +34,7 @@ fn main() {
     println!("{number:0>width$}", number=1, width=5);
 
     // Rust even checks to make sure the correct number of arguments are used.
-    println!("My name is {0}, {1} {0}", "Bond");
+    println!("My name is {0}, {1} {0}", "Bond", "James");
     // FIXME ^ Add the missing argument: "James"
 
     // Only types that implement fmt::Display can be formatted with `{}`. User-
@@ -54,4 +54,8 @@ fn main() {
     let number: f64 = 1.0;
     let width: usize = 5;
     println!("{number:>width$}");
+
+    // Set the number of decimal places in pi
+    let pi = 3.141592;
+    println!("{pi:.3}");
 }
